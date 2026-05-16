@@ -43,7 +43,6 @@
 html { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; }
 body { max-width: 480px; margin: 0 auto; min-height: 100vh; background: var(--bg); overflow-x: hidden; }
 
-/* ── HUD ── */
 .hud {
   background: var(--bg2);
   border-bottom: 0.5px solid var(--border);
@@ -124,7 +123,6 @@ body { max-width: 480px; margin: 0 auto; min-height: 100vh; background: var(--bg
 }
 .stat-chip .l { font-size: 9px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.4px; }
 
-/* ── TABS ── */
 .tabs {
   display: flex;
   background: var(--bg2);
@@ -153,7 +151,6 @@ body { max-width: 480px; margin: 0 auto; min-height: 100vh; background: var(--bg
 .section { display: none; padding: 16px 18px 100px; }
 .section.active { display: block; }
 
-/* ── SHARED ── */
 .section-label {
   font-size: 10px;
   font-weight: 600;
@@ -180,7 +177,29 @@ body { max-width: 480px; margin: 0 auto; min-height: 100vh; background: var(--bg
 }
 .phase-bar span { font-size: 11px; opacity: 0.75; }
 
-/* ── CARDS (non-negotiables) ── */
+.new-day-banner {
+  background: var(--bg3);
+  border: 0.5px solid var(--border2);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.new-day-date {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+.new-day-sub {
+  font-size: 10px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
 .nn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
 
 .nn-card {
@@ -209,7 +228,6 @@ body { max-width: 480px; margin: 0 auto; min-height: 100vh; background: var(--bg
 .nn-card.done .check { display: flex; }
 .checksvg { width: 10px; height: 10px; }
 
-/* ── MEALS ── */
 .meal-block {
   background: var(--bg3);
   border: 0.5px solid var(--border);
@@ -270,7 +288,6 @@ input[type=file] { display: none; }
 }
 .photo-thumb:hover { opacity: 0.8; }
 
-/* ── WATER ── */
 .water-wrap { margin-bottom: 14px; }
 .drops { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 6px; }
 .drop {
@@ -287,7 +304,6 @@ input[type=file] { display: none; }
 .drop:hover { border-color: var(--blue); }
 .water-count { font-size: 11px; color: var(--text3); }
 
-/* ── SLEEP RATING ── */
 .sleep-opts { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
 .sleep-btn {
   padding: 5px 12px;
@@ -303,7 +319,6 @@ input[type=file] { display: none; }
 }
 .sleep-btn.selected { background: var(--teal-bg); border-color: var(--teal); color: var(--teal-dark); }
 
-/* ── COMMIT BTN ── */
 .commit-btn {
   width: 100%;
   padding: 14px;
@@ -322,7 +337,6 @@ input[type=file] { display: none; }
 .commit-btn:active { transform: scale(0.98); }
 .commit-btn:disabled { opacity: 0.5; cursor: default; transform: none; }
 
-/* ── GYM ── */
 .muscle-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
 .muscle-btn {
   padding: 6px 13px;
@@ -396,10 +410,7 @@ input[type=file] { display: none; }
 .weight-big-input:focus { border-color: var(--gold-dark); }
 .unit-label { font-size: 14px; color: var(--text3); }
 
-/* ── PROGRESS ── */
-.weight-display {
-  margin-bottom: 16px;
-}
+.weight-display { margin-bottom: 16px; }
 .weight-num {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 56px;
@@ -472,7 +483,6 @@ input[type=file] { display: none; }
   border-radius: var(--radius-pill);
 }
 
-/* ── ACHIEVEMENTS ── */
 .ach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .ach-card {
   background: var(--bg3);
@@ -491,7 +501,6 @@ input[type=file] { display: none; }
 .ach-desc { font-size: 10px; color: var(--text3); line-height: 1.4; }
 .ach-count { font-size: 11px; color: var(--gold); margin-bottom: 10px; font-weight: 500; }
 
-/* ── TOAST ── */
 .toast {
   position: fixed;
   top: 20px;
@@ -515,7 +524,6 @@ input[type=file] { display: none; }
   opacity: 1;
 }
 
-/* ── HISTORY LOG ── */
 .history-entry {
   background: var(--bg3);
   border: 0.5px solid var(--border);
@@ -545,7 +553,6 @@ input[type=file] { display: none; }
 .pill-miss { background: var(--bg4); color: var(--text3); }
 .history-meals { font-size: 11px; color: var(--text3); line-height: 1.6; }
 
-/* ── PHOTO VIEWER ── */
 .photo-viewer {
   display: none;
   position: fixed;
@@ -568,12 +575,10 @@ input[type=file] { display: none; }
   border: none;
 }
 
-/* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg2); }
 ::-webkit-scrollbar-thumb { background: var(--bg4); border-radius: 2px; }
 
-/* ── MISC ── */
 .progress-title {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 17px;
@@ -639,7 +644,8 @@ input[type=file] { display: none; }
   <img id="photoViewerImg" src="" alt="meal photo">
 </div>
 
-<!-- HUD -->
+<div class="toast" id="toast"></div>
+
 <div class="hud">
   <div class="hud-top">
     <div class="avatar" id="avatarEl">PR</div>
@@ -663,7 +669,6 @@ input[type=file] { display: none; }
   </div>
 </div>
 
-<!-- TABS -->
 <div class="tabs">
   <button class="tab active" onclick="tab('log')">Log</button>
   <button class="tab" onclick="tab('gym')">Gym</button>
@@ -672,11 +677,17 @@ input[type=file] { display: none; }
   <button class="tab" onclick="tab('history')">History</button>
 </div>
 
-<!-- LOG -->
 <div id="sec-log" class="section active">
   <div class="phase-bar">Phase 1: Foundation — Week 3 of 4 <span>Ends May 11</span></div>
 
-  <!-- Date selector -->
+  <div class="new-day-banner">
+    <div>
+      <div class="new-day-date" id="newDayDate">—</div>
+      <div class="new-day-sub" id="newDayStatus">Loading...</div>
+    </div>
+    <div style="font-size:28px;">📅</div>
+  </div>
+
   <div class="section-label">Logging for</div>
   <div style="display:flex;gap:8px;margin-bottom:14px;">
     <button class="sleep-btn selected" id="logDateToday" onclick="setLogDate('today')" style="flex:1;text-align:center;">Today</button>
@@ -779,7 +790,6 @@ input[type=file] { display: none; }
   <button class="commit-btn" id="commitBtn" onclick="commitDay()">COMMIT LOG → EARN XP</button>
 </div>
 
-<!-- GYM -->
 <div id="sec-gym" class="section">
   <div class="phase-bar">5-Day Split — log your session<span id="gymDayLabel">Tuesday: Chest (Push)</span></div>
 
@@ -817,7 +827,6 @@ input[type=file] { display: none; }
   </div>
   <div style="font-size:10px;color:var(--text3);margin-bottom:14px;">After waking, after bathroom, before food — same every Monday</div>
 
-  <!-- Weekly progress photo — shows every Tuesday (chest day) -->
   <div id="weeklyPhotoBlock" style="display:none;">
     <div class="divider"></div>
     <div style="background:var(--gold-bg);border:1px solid var(--gold);border-radius:var(--radius);padding:14px 16px;margin-bottom:14px;">
@@ -835,7 +844,6 @@ input[type=file] { display: none; }
   <button class="commit-btn" onclick="commitGym()">LOG GYM SESSION → +200 XP</button>
 </div>
 
-<!-- PROGRESS -->
 <div id="sec-progress" class="section">
   <div class="progress-title">Weight Trend</div>
   <div class="weight-display">
@@ -863,23 +871,20 @@ input[type=file] { display: none; }
   <div id="weeklyPhotoGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;"></div>
 </div>
 
-<!-- TROPHIES -->
 <div id="sec-trophies" class="section">
   <div class="ach-count" id="achCount">8 of 20 trophies earned</div>
   <div class="ach-grid" id="achGrid"></div>
 </div>
 
-<!-- HISTORY -->
 <div id="sec-history" class="section">
   <div class="section-label">Past logs</div>
   <div id="historyList"></div>
 </div>
 
 <script>
-// ── SUPABASE CONFIG ──
 const SB_URL = 'https://ufpfdhuvdecsscyqwpjg.supabase.co';
 const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVmcGZkaHV2ZGVjc3NjeXF3cGpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwMzIxMzksImV4cCI6MjA5MzYwODEzOX0.eTb8iRfAQrFHfVVspxe-s8nL7HnBghIbP50Z6kiKD2I';
-const USER_ID = 'prymr_fighter_1'; // single user — change if you add more
+const USER_ID = 'prymr_fighter_1';
 
 const SETUP_SQL = `-- PRYMR Fighter — run this once in Supabase SQL Editor
 
@@ -914,7 +919,6 @@ create table if not exists prymr_photos (
   created_at timestamptz default now()
 );
 
--- Allow all access (single-user personal app)
 alter table prymr_state enable row level security;
 alter table prymr_day_logs enable row level security;
 alter table prymr_gym_logs enable row level security;
@@ -929,18 +933,14 @@ function showSetup() {
   document.getElementById('setupSQL').textContent = SETUP_SQL;
   document.getElementById('setupModal').style.display = 'block';
 }
-
 function closeSetup() {
   document.getElementById('setupModal').style.display = 'none';
   localStorage.setItem('prymr_setup_done','1');
   pullFromCloud();
 }
-
 function copySetupSQL() {
   navigator.clipboard.writeText(SETUP_SQL).then(() => showToast('SQL copied!')).catch(() => showToast('Select and copy manually'));
 }
-
-// Check if setup has been done
 function checkSetup() {
   if (!localStorage.getItem('prymr_setup_done')) showSetup();
 }
@@ -979,55 +979,11 @@ async function sbDelete(table, filter) {
   } catch { return false; }
 }
 
-// ── DB SETUP — runs once to create tables ──
-async function ensureTables() {
-  // Use the SQL execution endpoint via RPC
-  const sql = `
-    CREATE TABLE IF NOT EXISTS prymr_state (
-      user_id text PRIMARY KEY,
-      data jsonb NOT NULL,
-      updated_at timestamptz DEFAULT now()
-    );
-    CREATE TABLE IF NOT EXISTS prymr_day_logs (
-      id text PRIMARY KEY,
-      user_id text NOT NULL,
-      date text NOT NULL,
-      data jsonb NOT NULL,
-      created_at timestamptz DEFAULT now()
-    );
-    CREATE TABLE IF NOT EXISTS prymr_gym_logs (
-      id text PRIMARY KEY,
-      user_id text NOT NULL,
-      date text NOT NULL,
-      data jsonb NOT NULL,
-      created_at timestamptz DEFAULT now()
-    );
-    CREATE TABLE IF NOT EXISTS prymr_photos (
-      id text PRIMARY KEY,
-      user_id text NOT NULL,
-      date text NOT NULL,
-      slot text NOT NULL,
-      data text NOT NULL,
-      created_at timestamptz DEFAULT now()
-    );
-  `;
-  try {
-    const r = await fetch(`${SB_URL}/rest/v1/rpc/exec_sql`, {
-      method: 'POST',
-      headers: { apikey: SB_KEY, Authorization: `Bearer ${SB_KEY}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: sql })
-    });
-    // If exec_sql doesn't exist, fall back — tables will be created on first upsert attempt
-  } catch {}
-}
-
-// ── LOCAL STORAGE HELPERS ──
 const L = {
   get: k => { try { return JSON.parse(localStorage.getItem('prymr_'+k)); } catch { return null; } },
   set: (k,v) => localStorage.setItem('prymr_'+k, JSON.stringify(v)),
 };
 
-// ── SYNC STATUS UI ──
 let syncEl;
 function setSyncStatus(status) {
   if (!syncEl) return;
@@ -1037,27 +993,19 @@ function setSyncStatus(status) {
   syncEl.style.color = col[status] || 'var(--text3)';
 }
 
-// ── INITIAL STATE ──
 const DEFAULT_STATE = {
-  xp: 1340,
-  level: 4,
-  startWeight: 245,
-  currentWeight: 238.5,
-  totalGymSessions: 9,
-  streakDays: 18,
+  xp: 1340, level: 4, startWeight: 245, currentWeight: 238.5,
+  totalGymSessions: 9, streakDays: 18,
   weightLog: [
     {date:'2026-04-13', w:245},
     {date:'2026-04-20', w:242},
     {date:'2026-04-27', w:238.5}
   ],
-  gymLog: [],
-  dayLogs: [],
-  achievements: []
+  gymLog: [], dayLogs: [], achievements: []
 };
 
 let state = L.get('state') || {...DEFAULT_STATE};
 
-// ── SAVE — writes local immediately, then syncs to Supabase ──
 function saveState() {
   L.set('state', state);
   syncStateToCloud();
@@ -1065,18 +1013,12 @@ function saveState() {
 
 async function syncStateToCloud() {
   setSyncStatus('syncing');
-  // Sync core state
   const ok = await sbUpsert('prymr_state', {
     user_id: USER_ID,
     data: {
-      xp: state.xp,
-      level: state.level,
-      startWeight: state.startWeight,
-      currentWeight: state.currentWeight,
-      totalGymSessions: state.totalGymSessions,
-      streakDays: state.streakDays,
-      weightLog: state.weightLog,
-      achievements: state.achievements
+      xp: state.xp, level: state.level, startWeight: state.startWeight,
+      currentWeight: state.currentWeight, totalGymSessions: state.totalGymSessions,
+      streakDays: state.streakDays, weightLog: state.weightLog, achievements: state.achievements
     },
     updated_at: new Date().toISOString()
   });
@@ -1084,101 +1026,75 @@ async function syncStateToCloud() {
 }
 
 async function syncDayLogToCloud(entry) {
-  await sbUpsert('prymr_day_logs', {
-    id: `${USER_ID}_${entry.date}`,
-    user_id: USER_ID,
-    date: entry.date,
-    data: entry
-  });
+  await sbUpsert('prymr_day_logs', { id: `${USER_ID}_${entry.date}`, user_id: USER_ID, date: entry.date, data: entry });
 }
 
 async function syncGymLogToCloud(entry) {
-  await sbUpsert('prymr_gym_logs', {
-    id: `${USER_ID}_${entry.date}_${Date.now()}`,
-    user_id: USER_ID,
-    date: entry.date,
-    data: entry
-  });
+  await sbUpsert('prymr_gym_logs', { id: `${USER_ID}_${entry.date}_${Date.now()}`, user_id: USER_ID, date: entry.date, data: entry });
 }
 
 async function syncPhotoToCloud(date, slot, base64arr) {
   for (let i = 0; i < base64arr.length; i++) {
-    await sbUpsert('prymr_photos', {
-      id: `${USER_ID}_${date}_${slot}_${i}`,
-      user_id: USER_ID,
-      date,
-      slot,
-      data: base64arr[i]
-    });
+    await sbUpsert('prymr_photos', { id: `${USER_ID}_${date}_${slot}_${i}`, user_id: USER_ID, date, slot, data: base64arr[i] });
   }
 }
 
-// ── PULL FROM CLOUD on load ──
 async function pullFromCloud() {
   setSyncStatus('syncing');
   let changed = false;
-
-  // Pull core state
   const stateRows = await sbGet('prymr_state', `user_id=eq.${USER_ID}`);
   if (stateRows && stateRows.length > 0) {
-    const cloudState = stateRows[0].data;
-    // Merge: take higher XP, more sessions, more streak
-    if (cloudState.xp > state.xp) { state.xp = cloudState.xp; changed = true; }
-    if (cloudState.totalGymSessions > state.totalGymSessions) { state.totalGymSessions = cloudState.totalGymSessions; changed = true; }
-    if (cloudState.streakDays > state.streakDays) { state.streakDays = cloudState.streakDays; changed = true; }
-    if (cloudState.currentWeight && cloudState.currentWeight !== state.currentWeight) { state.currentWeight = cloudState.currentWeight; changed = true; }
-    if (cloudState.weightLog && cloudState.weightLog.length > state.weightLog.length) { state.weightLog = cloudState.weightLog; changed = true; }
-    if (cloudState.achievements) {
-      cloudState.achievements.forEach(a => { if (!state.achievements.includes(a)) { state.achievements.push(a); changed = true; } });
-    }
+    const cs = stateRows[0].data;
+    if (cs.xp > state.xp) { state.xp = cs.xp; changed = true; }
+    if (cs.totalGymSessions > state.totalGymSessions) { state.totalGymSessions = cs.totalGymSessions; changed = true; }
+    if (cs.streakDays > state.streakDays) { state.streakDays = cs.streakDays; changed = true; }
+    if (cs.currentWeight && cs.currentWeight !== state.currentWeight) { state.currentWeight = cs.currentWeight; changed = true; }
+    if (cs.weightLog && cs.weightLog.length > state.weightLog.length) { state.weightLog = cs.weightLog; changed = true; }
+    if (cs.achievements) { cs.achievements.forEach(a => { if (!state.achievements.includes(a)) { state.achievements.push(a); changed = true; } }); }
   }
-
-  // Pull day logs
   const dayRows = await sbGet('prymr_day_logs', `user_id=eq.${USER_ID}&order=date.asc`);
   if (dayRows && dayRows.length > 0) {
     const existingDates = new Set(state.dayLogs.map(l => l.date));
-    dayRows.forEach(row => {
-      if (!existingDates.has(row.date)) { state.dayLogs.push(row.data); changed = true; }
-    });
+    dayRows.forEach(row => { if (!existingDates.has(row.date)) { state.dayLogs.push(row.data); changed = true; } });
   }
-
-  // Pull gym logs
   const gymRows = await sbGet('prymr_gym_logs', `user_id=eq.${USER_ID}&order=date.asc`);
   if (gymRows && gymRows.length > 0) {
     const existingCount = state.gymLog.length;
     const existingDates = new Set(state.gymLog.map(l => l.date));
-    gymRows.forEach(row => {
-      if (!existingDates.has(row.date)) { state.gymLog.push(row.data); changed = true; }
-    });
-    if (state.gymLog.length > existingCount) {
-      state.totalGymSessions = Math.max(state.totalGymSessions, state.gymLog.length);
-    }
+    gymRows.forEach(row => { if (!existingDates.has(row.date)) { state.gymLog.push(row.data); changed = true; } });
+    if (state.gymLog.length > existingCount) state.totalGymSessions = Math.max(state.totalGymSessions, state.gymLog.length);
   }
-
   if (changed) { L.set('state', state); updateHUD(); }
   setSyncStatus(stateRows !== null ? 'ok' : 'offline');
   return changed;
 }
 
-// ── LOG DATE ──
+// ── FIX #1: Local date, not UTC ──
+function todayKey() {
+  return new Date().toLocaleDateString('en-CA');
+}
+
+// ── FIX #2: Yesterday also uses local date ──
+function yesterdayKey() {
+  const d = new Date();
+  d.setDate(d.getDate() - 1);
+  return d.toLocaleDateString('en-CA');
+}
+
 let logDateMode = 'today';
 
 function getLogDate() {
   if (logDateMode === 'today') return todayKey();
-  if (logDateMode === 'yesterday') {
-    const d = new Date(); d.setDate(d.getDate()-1);
-    return d.toISOString().split('T')[0];
-  }
+  if (logDateMode === 'yesterday') return yesterdayKey();
   return document.getElementById('logCustomDate').value || todayKey();
 }
 
 function setLogDate(mode) {
   logDateMode = mode;
   ['today','yesterday','custom'].forEach(m => {
-    const id = 'logDate' + m.charAt(0).toUpperCase() + m.slice(1);
-    document.getElementById(id).classList.toggle('selected', m === mode);
+    document.getElementById('logDate'+m.charAt(0).toUpperCase()+m.slice(1)).classList.toggle('selected', m===mode);
   });
-  document.getElementById('logCustomDateWrap').style.display = mode === 'custom' ? 'block' : 'none';
+  document.getElementById('logCustomDateWrap').style.display = mode==='custom' ? 'block' : 'none';
   if (mode !== 'custom') refreshLogFormForDate(getLogDate());
 }
 
@@ -1186,41 +1102,43 @@ function onLogDateChange() {
   refreshLogFormForDate(getLogDate());
 }
 
+// ── FIX #3: New day banner ──
+function updateNewDayBanner(date) {
+  const d = new Date(date + 'T12:00:00');
+  const dateLabel = d.toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'}).toUpperCase();
+  document.getElementById('newDayDate').textContent = dateLabel;
+  const existing = state.dayLogs.find(l => l.date === date);
+  document.getElementById('newDayStatus').textContent = existing ? '✓ Already logged today' : 'New day — ready to log';
+  document.getElementById('newDayStatus').style.color = existing ? 'var(--green)' : 'var(--text3)';
+}
+
 function refreshLogFormForDate(date) {
+  updateNewDayBanner(date);
   const existing = state.dayLogs.find(l => l.date === date);
   const btn = document.getElementById('commitBtn');
   const banner = document.getElementById('todayDoneBanner');
 
-  // Reset all NN cards
   ['water','dinner','sleep','supps'].forEach(k => {
     todayTemp.nn[k] = existing ? (existing.nn[k] || false) : false;
     document.getElementById('nn-'+k).classList.toggle('done', todayTemp.nn[k]);
   });
 
-  // Reset meals
   document.getElementById('mB').value = existing ? (existing.meals.b || '') : '';
   document.getElementById('mL').value = existing ? (existing.meals.l || '') : '';
   document.getElementById('mD').value = existing ? (existing.meals.d || '') : '';
 
-  // Reset water
   waterFilled = existing ? (existing.waterGlasses || 0) : 0;
   todayTemp.waterGlasses = waterFilled;
   document.querySelectorAll('.drop').forEach((d,i) => d.classList.toggle('full', i < waterFilled));
   document.getElementById('waterCount').textContent = waterFilled + ' / 10 glasses' + (waterFilled >= 10 ? ' — MAXED! 💧' : '');
 
-  // Reset sleep
   document.querySelectorAll('.sleep-btn').forEach(b => b.classList.remove('selected'));
   if (existing && existing.sleepHours) {
     todayTemp.sleepHours = existing.sleepHours;
     document.querySelectorAll('.sleep-btn').forEach(b => { if (parseInt(b.dataset.h) === existing.sleepHours) b.classList.add('selected'); });
-  } else {
-    todayTemp.sleepHours = null;
-  }
+  } else { todayTemp.sleepHours = null; }
 
-  // Reset notes
   document.getElementById('notesArea').value = existing ? (existing.notes || '') : '';
-
-  // Reset photo strips
   ['B','L','D'].forEach(s => { document.getElementById('strip'+s).innerHTML = ''; photoData[s.toLowerCase()] = []; });
 
   if (existing) {
@@ -1239,50 +1157,29 @@ function refreshLogFormForDate(date) {
   }
 }
 
-// ── TODAY KEY ──
-function todayKey() {
-  const d = new Date();
-  return d.toISOString().split('T')[0];
-}
-
-function getTodayLog() {
-  return state.dayLogs.find(l => l.date === todayKey()) || null;
-}
-
-// ── TEMP LOG (not yet committed) ──
 let todayTemp = {
   nn: { water: false, dinner: false, sleep: false, supps: false },
-  waterGlasses: 0,
-  sleepHours: null,
+  waterGlasses: 0, sleepHours: null,
   meals: { b: '', l: '', d: '' },
   photos: { b: [], l: [], d: [] },
   notes: ''
 };
 
-// Photo storage — separate from state to avoid size issues
 function photoKey(date, slot) { return `photos_${date}_${slot}`; }
 
-// ── XP + LEVEL ──
 const LEVELS = [
-  {l:1, xp:0, title:'Raw Recruit'},
-  {l:2, xp:200, title:'Grind Starter'},
-  {l:3, xp:500, title:'Iron Trainee'},
-  {l:4, xp:900, title:'Iron Recruit'},
-  {l:5, xp:1400, title:'Week 4 Warrior'},
-  {l:6, xp:2000, title:'Phase 1 Champion'},
-  {l:7, xp:2800, title:'Phase 2 Fighter'},
-  {l:8, xp:3800, title:'Lean Machine'},
-  {l:9, xp:5000, title:'Phase 3 Beast'},
-  {l:10, xp:6500, title:'Transformation Complete'},
+  {l:1, xp:0, title:'Raw Recruit'}, {l:2, xp:200, title:'Grind Starter'},
+  {l:3, xp:500, title:'Iron Trainee'}, {l:4, xp:900, title:'Iron Recruit'},
+  {l:5, xp:1400, title:'Week 4 Warrior'}, {l:6, xp:2000, title:'Phase 1 Champion'},
+  {l:7, xp:2800, title:'Phase 2 Fighter'}, {l:8, xp:3800, title:'Lean Machine'},
+  {l:9, xp:5000, title:'Phase 3 Beast'}, {l:10, xp:6500, title:'Transformation Complete'},
 ];
 
 function getLevelData(xp) {
   let cur = LEVELS[0];
-  for (let i = LEVELS.length-1; i >= 0; i--) {
-    if (xp >= LEVELS[i].xp) { cur = LEVELS[i]; break; }
-  }
+  for (let i = LEVELS.length-1; i >= 0; i--) { if (xp >= LEVELS[i].xp) { cur = LEVELS[i]; break; } }
   const next = LEVELS[Math.min(LEVELS.findIndex(l=>l.l===cur.l)+1, LEVELS.length-1)];
-  return { cur, next, pct: next.l !== cur.l ? Math.round(((xp - cur.xp)/(next.xp - cur.xp))*100) : 100 };
+  return { cur, next, pct: next.l !== cur.l ? Math.round(((xp-cur.xp)/(next.xp-cur.xp))*100) : 100 };
 }
 
 function updateHUD() {
@@ -1299,7 +1196,6 @@ function updateHUD() {
   document.getElementById('sGym').textContent = state.totalGymSessions;
 }
 
-// ── TOAST ──
 let toastTimer;
 function showToast(msg) {
   const el = document.getElementById('toast');
@@ -1309,7 +1205,6 @@ function showToast(msg) {
   toastTimer = setTimeout(() => el.classList.remove('show'), 2400);
 }
 
-// ── TABS ──
 const TABS = ['log','gym','progress','trophies','history'];
 function tab(name) {
   TABS.forEach(t => {
@@ -1322,15 +1217,11 @@ function tab(name) {
   if(name==='gym') checkWeeklyPhotoBlock();
 }
 
-// ── NON-NEGOTIABLES ──
 function toggleNN(key) {
-  const cur = todayTemp.nn[key];
-  todayTemp.nn[key] = !cur;
-  const el = document.getElementById('nn-'+key);
-  el.classList.toggle('done', todayTemp.nn[key]);
+  todayTemp.nn[key] = !todayTemp.nn[key];
+  document.getElementById('nn-'+key).classList.toggle('done', todayTemp.nn[key]);
 }
 
-// ── WATER ──
 let waterFilled = 0;
 function buildDrops() {
   const wrap = document.getElementById('drops');
@@ -1350,14 +1241,12 @@ function buildDrops() {
   }
 }
 
-// ── SLEEP ──
 function setSleep(btn) {
   document.querySelectorAll('.sleep-btn').forEach(b => b.classList.remove('selected'));
   btn.classList.add('selected');
   todayTemp.sleepHours = parseInt(btn.dataset.h);
 }
 
-// ── PHOTOS ──
 const photoData = { b: [], l: [], d: [] };
 
 function addPhotos(input, stripId) {
@@ -1369,8 +1258,7 @@ function addPhotos(input, stripId) {
       const src = e.target.result;
       photoData[slot].push(src);
       const img = document.createElement('img');
-      img.src = src;
-      img.className = 'photo-thumb';
+      img.src = src; img.className = 'photo-thumb';
       img.onclick = () => openPhoto(src);
       strip.appendChild(img);
     };
@@ -1382,16 +1270,12 @@ function openPhoto(src) {
   document.getElementById('photoViewerImg').src = src;
   document.getElementById('photoViewer').classList.add('open');
 }
-function closePhoto() {
-  document.getElementById('photoViewer').classList.remove('open');
-}
+function closePhoto() { document.getElementById('photoViewer').classList.remove('open'); }
 
-// ── COMMIT DAY ──
 function commitDay() {
   const logDate = getLogDate();
   const existingIdx = state.dayLogs.findIndex(l => l.date === logDate);
   const isOverwrite = existingIdx !== -1;
-
   const meals = { b: document.getElementById('mB').value.trim(), l: document.getElementById('mL').value.trim(), d: document.getElementById('mD').value.trim() };
   const notes = document.getElementById('notesArea').value.trim();
   const nn = {...todayTemp.nn};
@@ -1400,41 +1284,26 @@ function commitDay() {
 
   let xpGain = 0;
   if (!isOverwrite) {
-    // Only award XP for new entries, not overwrites
-    if(nnCount === 4) xpGain += 100;
-    else xpGain += nnCount * 20;
-    if(mealCount === 3) xpGain += 80;
-    else xpGain += mealCount * 25;
-    if(waterFilled >= 10) xpGain += 30;
-    else if(waterFilled >= 8) xpGain += 15;
-    if(todayTemp.sleepHours >= 8) xpGain += 25;
-    else if(todayTemp.sleepHours >= 7) xpGain += 15;
+    if(nnCount === 4) xpGain += 100; else xpGain += nnCount * 20;
+    if(mealCount === 3) xpGain += 80; else xpGain += mealCount * 25;
+    if(waterFilled >= 10) xpGain += 30; else if(waterFilled >= 8) xpGain += 15;
+    if(todayTemp.sleepHours >= 8) xpGain += 25; else if(todayTemp.sleepHours >= 7) xpGain += 15;
     xpGain = Math.max(xpGain, 20);
   }
 
   const entry = {
     date: logDate,
     xpEarned: isOverwrite ? (state.dayLogs[existingIdx].xpEarned || 0) : xpGain,
-    nn,
-    meals,
-    waterGlasses: waterFilled,
-    sleepHours: todayTemp.sleepHours,
-    notes,
+    nn, meals, waterGlasses: waterFilled, sleepHours: todayTemp.sleepHours, notes,
     hasPhotos: { b: photoData.b.length > 0, l: photoData.l.length > 0, d: photoData.d.length > 0 }
   };
 
-  // Save photos locally
   if(photoData.b.length) L.set(photoKey(logDate,'b'), photoData.b);
   if(photoData.l.length) L.set(photoKey(logDate,'l'), photoData.l);
   if(photoData.d.length) L.set(photoKey(logDate,'d'), photoData.d);
 
-  if (isOverwrite) {
-    state.dayLogs[existingIdx] = entry;
-  } else {
-    state.dayLogs.push(entry);
-    state.xp += xpGain;
-    state.streakDays += 1;
-  }
+  if (isOverwrite) { state.dayLogs[existingIdx] = entry; }
+  else { state.dayLogs.push(entry); state.xp += xpGain; state.streakDays += 1; }
 
   checkAchievements();
   saveState();
@@ -1443,22 +1312,18 @@ function commitDay() {
   if(photoData.l.length) syncPhotoToCloud(logDate,'l',photoData.l);
   if(photoData.d.length) syncPhotoToCloud(logDate,'d',photoData.d);
   updateHUD();
+  showToast(isOverwrite ? '✓ LOG UPDATED' : '+' + xpGain + ' XP — DAY LOCKED IN!');
 
-  const msg = isOverwrite ? '✓ LOG UPDATED' : '+' + xpGain + ' XP — DAY LOCKED IN!';
-  showToast(msg);
-
-  // Update button state
   const banner = document.getElementById('todayDoneBanner');
   const btn = document.getElementById('commitBtn');
   banner.style.display = 'block';
   banner.textContent = '✓ Log committed for ' + logDate;
   btn.disabled = true;
   btn.textContent = isOverwrite ? '✓ LOG UPDATED' : '✓ COMMITTED — ' + xpGain + ' XP EARNED';
-  btn.style.background = '';
-  btn.style.color = '';
+  btn.style.background = ''; btn.style.color = '';
+  updateNewDayBanner(logDate);
 }
 
-// ── GYM DATE ──
 let gymDateMode = 'today';
 
 function setGymDate(mode) {
@@ -1472,14 +1337,10 @@ function setGymDate(mode) {
 
 function getGymDate() {
   if (gymDateMode === 'today') return todayKey();
-  if (gymDateMode === 'yesterday') {
-    const d = new Date(); d.setDate(d.getDate()-1);
-    return d.toISOString().split('T')[0];
-  }
+  if (gymDateMode === 'yesterday') return yesterdayKey();
   return document.getElementById('gymCustomDate').value || todayKey();
 }
 
-// ── GYM ──
 const MUSCLE_LIFTS = {
   legs: ['Hack squat','Leg press','Leg extension','Leg curl','Calf raise'],
   chest: ['Supine press','Incline DB press','Pec fly','Tricep pushdown','Dips (assisted)'],
@@ -1493,8 +1354,7 @@ const activeMuscles = new Set();
 function toggleMuscle(btn) {
   const m = btn.dataset.muscle;
   btn.classList.toggle('on');
-  if(btn.classList.contains('on')) activeMuscles.add(m);
-  else activeMuscles.delete(m);
+  if(btn.classList.contains('on')) activeMuscles.add(m); else activeMuscles.delete(m);
   rebuildLifts();
 }
 
@@ -1510,8 +1370,7 @@ function rebuildLifts() {
       <div class="lift-name">${name}</div>
       <input type="number" placeholder="lbs" min="0" max="999" style="text-align:center;">
       <input type="number" placeholder="reps" min="0" max="100" style="text-align:center;">
-    </div>
-  `).join('');
+    </div>`).join('');
 }
 
 function addCustomLift() {
@@ -1525,93 +1384,63 @@ function addCustomLift() {
 }
 
 function commitGym() {
+  const gymDate = getGymDate();
   const lifts = [];
   document.querySelectorAll('#liftRows .lift-row').forEach(row => {
     const inputs = row.querySelectorAll('input');
     const name = inputs[0].value || inputs[0].placeholder;
-    const lbs = inputs[1].value;
-    const reps = inputs[2].value;
+    const lbs = inputs[1].value; const reps = inputs[2].value;
     if(lbs || reps) lifts.push({name, lbs: lbs||'', reps: reps||''});
   });
 
   const weightIn = document.getElementById('weightIn').value;
   if(weightIn) {
     const w = parseFloat(weightIn);
-    if(w > 0 && w < 500) {
-      state.currentWeight = w;
-      state.weightLog.push({ date: gymDate, w });
-    }
+    if(w > 0 && w < 500) { state.currentWeight = w; state.weightLog.push({ date: gymDate, w }); }
   }
 
-  const gymEntry = {
-    date: gymDate,
-    muscles: [...activeMuscles],
-    lifts,
-    xpEarned: 200
-  };
-
+  const gymEntry = { date: gymDate, muscles: [...activeMuscles], lifts, xpEarned: 200 };
   state.gymLog.push(gymEntry);
-  state.xp += 200;
-  state.totalGymSessions += 1;
-  checkAchievements();
-  saveWeeklyPhotos();
-  saveState();
-  syncGymLogToCloud(gymEntry);
-  updateHUD();
-  showToast('+200 XP — SESSION LOGGED!');
-  setGymDate('today');
-  weeklyPhotoData.length = 0;
+  state.xp += 200; state.totalGymSessions += 1;
+  checkAchievements(); saveWeeklyPhotos(); saveState(); syncGymLogToCloud(gymEntry);
+  updateHUD(); showToast('+200 XP — SESSION LOGGED!');
+  setGymDate('today'); weeklyPhotoData.length = 0;
 }
 
-// ── PROGRESS ──
 function renderProgress() {
-  // Weight chart
   const chart = document.getElementById('weightChart');
   chart.innerHTML = '';
   const logs = state.weightLog.slice(-8);
   if(logs.length > 0) {
     const vals = logs.map(l => l.w);
-    const mn = Math.min(...vals) - 2;
-    const mx = Math.max(...vals) + 2;
-    const range = mx - mn;
+    const mn = Math.min(...vals) - 2; const mx = Math.max(...vals) + 2; const range = mx - mn;
     logs.forEach(l => {
-      const h = Math.round(((l.w - mn)/range) * 72) + 8;
+      const h = Math.round(((l.w-mn)/range)*72)+8;
       const col = document.createElement('div');
       col.className = 'chart-col';
-      const shortDate = l.date.slice(5).replace('-','/');
-      col.innerHTML = `<div class="chart-val">${l.w}</div><div class="chart-bar" style="height:${h}px"></div><div class="chart-lbl">${shortDate}</div>`;
+      col.innerHTML = `<div class="chart-val">${l.w}</div><div class="chart-bar" style="height:${h}px"></div><div class="chart-lbl">${l.date.slice(5).replace('-','/')}</div>`;
       chart.appendChild(col);
     });
   }
-
-  // Update weight display
   const lost = (state.startWeight - state.currentWeight).toFixed(1);
   document.getElementById('progWeight').textContent = state.currentWeight;
   document.getElementById('progDelta').textContent = '-' + (parseFloat(lost)>0?lost:'0') + ' lbs since start';
 
-  // Streak calendar
   const ring = document.getElementById('streakGrid');
   ring.innerHTML = '';
   const logDates = new Set(state.dayLogs.map(l=>l.date));
   const gymDates = new Set(state.gymLog.map(l=>l.date));
   const today = todayKey();
-
-  // Show last 30 days
   for(let i=29;i>=0;i--) {
-    const d = new Date();
-    d.setDate(d.getDate()-i);
-    const key = d.toISOString().split('T')[0];
-    const dayNum = 30-i;
+    const d = new Date(); d.setDate(d.getDate()-i);
+    const key = d.toLocaleDateString('en-CA');
     const dot = document.createElement('div');
-    const isGym = gymDates.has(key);
-    const isLog = logDates.has(key);
-    const isToday = key === today;
-    dot.className = 's-dot' + (isGym?' gym':isLog?' log':'') + (isToday?' today':'');
-    dot.textContent = dayNum;
+    const isGym = gymDates.has(key); const isLog = logDates.has(key);
+    dot.className = 's-dot' + (isGym?' gym':isLog?' log':'') + (key===today?' today':'');
+    dot.textContent = 30-i;
     ring.appendChild(dot);
   }
 
-  // PRs
   const prs = [
     {name:'Hack squat', from:'150', to:'255', delta:'+105'},
     {name:'Incline DB press', from:'45', to:'120', delta:'+75'},
@@ -1619,41 +1448,29 @@ function renderProgress() {
     {name:'DB shoulder press', from:'35', to:'50', delta:'+15'},
     {name:'Pull-up assist', from:'175→', to:'100 assist', delta:'improving'},
   ];
-  document.getElementById('prList').innerHTML = prs.map(p => `
-    <div class="pr-row">
-      <span class="pr-name">${p.name}</span>
-      <span class="pr-from">${p.from} → ${p.to} lbs</span>
-      <span class="pr-delta">${p.delta}</span>
-    </div>
-  `).join('');
-
+  document.getElementById('prList').innerHTML = prs.map(p =>
+    `<div class="pr-row"><span class="pr-name">${p.name}</span><span class="pr-from">${p.from} → ${p.to} lbs</span><span class="pr-delta">${p.delta}</span></div>`
+  ).join('');
   renderWeeklyPhotoGrid();
 }
 
-// ── ACHIEVEMENTS ──
 const ACHIEVEMENTS = [
   { id:'day1', icon:'🔥', name:'Day 1', desc:'Started the program', check: s => s.dayLogs.length >= 1 },
-  { id:'hydro3', icon:'💧', name:'Hydration King', desc:'10 glasses, 3 days straight', check: s => {
-    let streak=0; for(let l of s.dayLogs) { if(l.waterGlasses>=10) streak++; else streak=0; if(streak>=3) return true; } return false;
-  }},
+  { id:'hydro3', icon:'💧', name:'Hydration King', desc:'10 glasses, 3 days straight', check: s => { let st=0; for(let l of s.dayLogs){if(l.waterGlasses>=10)st++;else st=0;if(st>=3)return true;} return false; }},
   { id:'split1', icon:'🏋️', name:'First Full Split', desc:'Completed 5-day split', check: s => s.totalGymSessions >= 5 },
-  { id:'lose5', icon:'📉', name:'5 Down', desc:'Lost 5 lbs from start', check: s => (s.startWeight - s.currentWeight) >= 5 },
+  { id:'lose5', icon:'📉', name:'5 Down', desc:'Lost 5 lbs from start', check: s => (s.startWeight-s.currentWeight) >= 5 },
   { id:'sleep5', icon:'😴', name:'Sleep Protocol', desc:'Logged 5 nights sleep', check: s => s.dayLogs.filter(l=>l.sleepHours).length >= 5 },
-  { id:'dinner7', icon:'🍗', name:'Dinner Discipline', desc:'Real dinner 7 nights logged', check: s => s.dayLogs.filter(l=>l.nn && l.nn.dinner).length >= 7 },
-  { id:'photo5', icon:'📷', name:'Food Fighter', desc:'Logged meal photos 5 days', check: s => s.dayLogs.filter(l=>l.hasPhotos && (l.hasPhotos.b||l.hasPhotos.l||l.hasPhotos.d)).length >= 5 },
+  { id:'dinner7', icon:'🍗', name:'Dinner Discipline', desc:'Real dinner 7 nights logged', check: s => s.dayLogs.filter(l=>l.nn&&l.nn.dinner).length >= 7 },
+  { id:'photo5', icon:'📷', name:'Food Fighter', desc:'Logged meal photos 5 days', check: s => s.dayLogs.filter(l=>l.hasPhotos&&(l.hasPhotos.b||l.hasPhotos.l||l.hasPhotos.d)).length >= 5 },
   { id:'gym9', icon:'💪', name:'Iron Week', desc:'9+ gym sessions total', check: s => s.totalGymSessions >= 9 },
   { id:'phase1', icon:'🏆', name:'Phase 1 Complete', desc:'Finish Foundation (Week 4)', check: s => s.totalGymSessions >= 20 },
   { id:'photo_w4', icon:'📸', name:'Before/After', desc:'Take Week 4 comparison photo', check: s => false },
   { id:'streak20', icon:'🎯', name:'20 Day Streak', desc:'Log 20 consecutive days', check: s => s.streakDays >= 20 },
-  { id:'hack300', icon:'🦾', name:'300 Club', desc:'Hack squat 300 lbs', check: s => {
-    for(let g of s.gymLog) for(let l of (g.lifts||[])) { if(l.name&&l.name.toLowerCase().includes('hack')&&parseInt(l.lbs)>=300) return true; } return false;
-  }},
-  { id:'water14', icon:'💦', name:'Flow State', desc:'10 glasses 14 days straight', check: s => {
-    let streak=0; for(let l of s.dayLogs) { if(l.waterGlasses>=10) streak++; else streak=0; if(streak>=14) return true; } return false;
-  }},
+  { id:'hack300', icon:'🦾', name:'300 Club', desc:'Hack squat 300 lbs', check: s => { for(let g of s.gymLog) for(let l of (g.lifts||[])){if(l.name&&l.name.toLowerCase().includes('hack')&&parseInt(l.lbs)>=300)return true;} return false; }},
+  { id:'water14', icon:'💦', name:'Flow State', desc:'10 glasses 14 days straight', check: s => { let st=0; for(let l of s.dayLogs){if(l.waterGlasses>=10)st++;else st=0;if(st>=14)return true;} return false; }},
   { id:'bed10', icon:'🌙', name:'Night Owl No More', desc:'In bed 10:30 — 7 days', check: s => s.dayLogs.filter(l=>l.nn&&l.nn.sleep).length >= 7 },
   { id:'phase2', icon:'⚡', name:'Phase 2 Unlocked', desc:'Start cardio on rest days', check: s => s.totalGymSessions >= 35 },
-  { id:'lose10', icon:'🔟', name:'10 lbs Gone', desc:'Lose 10 lbs total', check: s => (s.startWeight - s.currentWeight) >= 10 },
+  { id:'lose10', icon:'🔟', name:'10 lbs Gone', desc:'Lose 10 lbs total', check: s => (s.startWeight-s.currentWeight) >= 10 },
   { id:'prymr8', icon:'🧠', name:'Prymr Proof', desc:'Complete Week 8 as founder', check: s => s.totalGymSessions >= 50 },
   { id:'pullup', icon:'🥇', name:'Pull-up Warrior', desc:'Unassisted pull-up', check: s => false },
   { id:'story', icon:'📖', name:'Founder Story', desc:'90-day photo complete', check: s => false },
@@ -1661,12 +1478,11 @@ const ACHIEVEMENTS = [
 ];
 
 function checkAchievements() {
-  let newUnlocks = 0;
+  let n = 0;
   ACHIEVEMENTS.forEach(a => {
     if(!state.achievements.includes(a.id) && a.check(state)) {
-      state.achievements.push(a.id);
-      newUnlocks++;
-      setTimeout(() => showToast('🏆 TROPHY UNLOCKED — ' + a.name.toUpperCase()), newUnlocks * 600);
+      state.achievements.push(a.id); n++;
+      setTimeout(() => showToast('🏆 TROPHY UNLOCKED — ' + a.name.toUpperCase()), n * 600);
     }
   });
 }
@@ -1676,26 +1492,17 @@ function renderTrophies() {
   document.getElementById('achCount').textContent = earned + ' of ' + ACHIEVEMENTS.length + ' trophies earned';
   document.getElementById('achGrid').innerHTML = ACHIEVEMENTS.map(a => {
     const e = state.achievements.includes(a.id);
-    return `<div class="ach-card ${e?'earned':'locked'}">
-      <div class="ach-icon">${a.icon}</div>
-      <div><div class="ach-name">${a.name}</div><div class="ach-desc">${a.desc}</div></div>
-    </div>`;
+    return `<div class="ach-card ${e?'earned':'locked'}"><div class="ach-icon">${a.icon}</div><div><div class="ach-name">${a.name}</div><div class="ach-desc">${a.desc}</div></div></div>`;
   }).join('');
 }
 
-// ── HISTORY ──
 function renderHistory() {
   const el = document.getElementById('historyList');
-  if(state.dayLogs.length === 0) {
-    el.innerHTML = '<div class="no-history">No logs yet. Commit your first day!</div>';
-    return;
-  }
-  const sorted = [...state.dayLogs].reverse();
-  el.innerHTML = sorted.map(log => {
+  if(state.dayLogs.length === 0) { el.innerHTML = '<div class="no-history">No logs yet. Commit your first day!</div>'; return; }
+  el.innerHTML = [...state.dayLogs].reverse().map(log => {
     const dt = new Date(log.date + 'T12:00:00');
     const label = dt.toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'});
-    const nnLabels = ['water','dinner','sleep','supps'];
-    const pills = nnLabels.map(k => `<span class="history-pill ${log.nn&&log.nn[k]?'pill-done':'pill-miss'}">${k}</span>`).join('');
+    const pills = ['water','dinner','sleep','supps'].map(k => `<span class="history-pill ${log.nn&&log.nn[k]?'pill-done':'pill-miss'}">${k}</span>`).join('');
     const meals = [log.meals.b&&'🌅 '+log.meals.b, log.meals.l&&'☀️ '+log.meals.l, log.meals.d&&'🌙 '+log.meals.d].filter(Boolean).join('<br>');
     return `<div class="history-entry">
       <div class="history-date">${label}<span class="history-xp">+${log.xpEarned} XP</span></div>
@@ -1707,19 +1514,14 @@ function renderHistory() {
   }).join('');
 }
 
-// ── WEEKLY PROGRESS PHOTOS ──
 function getWeekNumber(dateStr) {
   const d = new Date(dateStr + 'T12:00:00');
-  const startOfProgram = new Date('2026-04-13T12:00:00'); // program start
-  const diffDays = Math.floor((d - startOfProgram) / (1000 * 60 * 60 * 24));
-  return Math.floor(diffDays / 7) + 1;
+  const start = new Date('2026-04-13T12:00:00');
+  return Math.floor((d - start) / (1000*60*60*24*7)) + 1;
 }
 
 function isTuesdayOrChestDay() {
-  // Show on Tuesday, or if gymDateMode is set to a Tuesday
-  const date = getGymDate();
-  const d = new Date(date + 'T12:00:00');
-  return d.getDay() === 2; // 2 = Tuesday
+  return new Date(getGymDate() + 'T12:00:00').getDay() === 2;
 }
 
 function checkWeeklyPhotoBlock() {
@@ -1729,14 +1531,11 @@ function checkWeeklyPhotoBlock() {
   if (isTuesday) {
     const weekNum = getWeekNumber(getGymDate());
     document.getElementById('weeklyPhotoWeekLabel').textContent = 'Week ' + weekNum + ' of your transformation';
-    // Load existing photos for this week if any
     const strip = document.getElementById('weeklyPhotoStrip');
     strip.innerHTML = '';
-    const existing = (state.weeklyPhotos || []).filter(p => p.week === weekNum);
-    existing.forEach(p => {
+    (state.weeklyPhotos||[]).filter(p=>p.week===weekNum).forEach(p => {
       const img = document.createElement('img');
-      img.src = p.data;
-      img.className = 'photo-thumb';
+      img.src = p.data; img.className = 'photo-thumb';
       img.style.width = '72px'; img.style.height = '72px';
       img.onclick = () => openPhoto(p.data);
       strip.appendChild(img);
@@ -1755,8 +1554,7 @@ function addWeeklyPhoto(input) {
       const src = e.target.result;
       weeklyPhotoData.push({ week: weekNum, date: getGymDate(), data: src });
       const img = document.createElement('img');
-      img.src = src;
-      img.className = 'photo-thumb';
+      img.src = src; img.className = 'photo-thumb';
       img.style.width = '72px'; img.style.height = '72px';
       img.onclick = () => openPhoto(src);
       strip.appendChild(img);
@@ -1769,19 +1567,11 @@ function saveWeeklyPhotos() {
   if (weeklyPhotoData.length === 0) return;
   if (!state.weeklyPhotos) state.weeklyPhotos = [];
   const weekNum = getWeekNumber(getGymDate());
-  // Remove old entries for same week, add new
   state.weeklyPhotos = state.weeklyPhotos.filter(p => p.week !== weekNum);
-  weeklyPhotoData.forEach(p => state.weeklyPhotos.push({week: p.week, date: p.date, data: p.data}));
+  weeklyPhotoData.forEach(p => state.weeklyPhotos.push(p));
   L.set('state', state);
-  // Sync photos to cloud
   weeklyPhotoData.forEach((p, i) => {
-    sbUpsert('prymr_photos', {
-      id: `${USER_ID}_weekly_w${p.week}_${i}`,
-      user_id: USER_ID,
-      date: p.date,
-      slot: 'weekly_w' + p.week,
-      data: p.data
-    });
+    sbUpsert('prymr_photos', { id: `${USER_ID}_weekly_w${p.week}_${i}`, user_id: USER_ID, date: p.date, slot: 'weekly_w'+p.week, data: p.data });
   });
 }
 
@@ -1793,57 +1583,32 @@ function renderWeeklyPhotoGrid() {
     grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;color:var(--text3);font-size:13px;padding:20px 0;">No progress photos yet — take your first one on chest day (Tuesday)</div>';
     return;
   }
-  // Group by week, show latest photo per week
   const byWeek = {};
   photos.forEach(p => { byWeek[p.week] = p; });
-  grid.innerHTML = Object.values(byWeek).sort((a,b) => a.week - b.week).map(p => `
+  grid.innerHTML = Object.values(byWeek).sort((a,b)=>a.week-b.week).map(p => `
     <div style="background:var(--bg3);border:0.5px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:pointer;" onclick="openPhoto('${p.data}')">
       <img src="${p.data}" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block;">
       <div style="padding:8px 10px;">
         <div style="font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--gold);letter-spacing:0.8px;">Week ${p.week}</div>
         <div style="font-size:10px;color:var(--text3);">${p.date}</div>
       </div>
-    </div>
-  `).join('');
-}
-function setGymDayLabel() {
-  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-  const splits = {
-    1:'Monday: Legs', 2:'Tuesday: Chest (Push)', 3:'Wednesday: Back + Bis',
-    4:'Thursday: Rest — Active recovery', 5:'Friday: Shoulders + Core',
-    6:'Saturday: Arms + Core', 0:'Sunday: Full Rest'
-  };
-  const d = new Date().getDay();
-  document.getElementById('gymDayLabel').textContent = splits[d] || '';
+    </div>`).join('');
 }
 
-// ── INIT ──
+function setGymDayLabel() {
+  const splits = {1:'Monday: Legs',2:'Tuesday: Chest (Push)',3:'Wednesday: Back + Bis',4:'Thursday: Rest — Active recovery',5:'Friday: Shoulders + Core',6:'Saturday: Arms + Core',0:'Sunday: Full Rest'};
+  document.getElementById('gymDayLabel').textContent = splits[new Date().getDay()] || '';
+}
+
 async function init() {
   syncEl = document.getElementById('syncStatus');
-  updateHUD();
-  buildDrops();
-  setGymDayLabel();
-  checkWeeklyPhotoBlock();
-  checkSetup();
-
-  // Restore achievements from local state
-  ACHIEVEMENTS.forEach(a => {
-    if(!state.achievements.includes(a.id) && a.check(state)) {
-      state.achievements.push(a.id);
-    }
-  });
+  updateHUD(); buildDrops(); setGymDayLabel(); checkWeeklyPhotoBlock(); checkSetup();
+  ACHIEVEMENTS.forEach(a => { if(!state.achievements.includes(a.id) && a.check(state)) state.achievements.push(a.id); });
   L.set('state', state);
-
-  // Set log form for today
   refreshLogFormForDate(todayKey());
-
-  // Pull latest from cloud (merges with local)
   await pullFromCloud();
   updateHUD();
-
-  // Re-check form state after cloud pull in case today was already logged on another device
   refreshLogFormForDate(getLogDate());
-
   checkAchievements();
 }
 
